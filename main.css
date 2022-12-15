@@ -47,5 +47,12 @@ main {
     align-items: center;
     text-align: center;
 }
+
+.location .city {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500px;
+    margin-bottom: 5px;
+}
   
 
