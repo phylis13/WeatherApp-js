@@ -7,11 +7,11 @@ h1{
     text-align: center;
 }
 body{
-    background: whitesmoke;
+    background: blue;
     padding: 1rem 5rem;
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
-    background: linear-gradient(45deg,rgba(183, 204, 248, 0.717),rgba(7, 43, 127, 0.679)), url('./background.jpg');
+    background: linear-gradient(45deg,rgba(183, 204, 248, 0.717),rgba(7, 43, 127, 0.679));
     
     background-repeat: no-repeat;
     background-position: center;
@@ -22,7 +22,7 @@ body{
   align-items: center;
 }
 .header h1{
-  color: rgb(214, 147, 45);
+  color: black;
   text-decoration: underline;
   font-family: 'Orbitron', sans-serif;
 }
@@ -37,7 +37,7 @@ body{
 #search{
   background: none;
   padding: 5px 20px;
-  color: aliceblue;
+  color: black;
   outline: none;
   background: cadetblue;
   font-size: 17px;
