@@ -35,7 +35,7 @@ header inputs {
 }
 
 header input:focus {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: plum;
 }
 
 main {
@@ -54,5 +54,38 @@ main {
     font-weight: 500px;
     margin-bottom: 5px;
 }
-  
+.current .date {
+    color: #fff;
+    font-size: 16px;
+}
+
+.current .temp {
+    color: #fff;
+    font-size: 102px;
+    font-weight: 900;
+    margin: 30px;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.current.temp span {
+    font-weight: 500;
+}
+
+.current .weather {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+
+}
+
+.current .hi-low {
+    color:#fff;
+    font-size: 24px;
+    font-weight: 500px;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+    
 
