@@ -59,4 +59,34 @@ function weatherReport(data){
       document.getElementById('img').src=iconurl
   })
 
+}function hourForecast(forecast){
+  document.querySelector('.templist').innerHTML=''
+  for (let i = 0; i < 5; i++) {
+
+      var date= new Date(forecast.list[i].dt*1000)
+      console.log((date.toLocaleTimeString(undefined,'Asia/Kolkata')).replace(':00',''))
+
+      let hourR=document.createElement('div');
+      hourR.setAttribute('class','next');
+
+      let div= document.createElement('div');
+      let time= document.createElement('p');
+      time.setAttribute('class','time')
+      time.innerText= (date.toLocaleTimeString(undefined,'Asia/Kolkata')).replace(':00','');
+
+      let temp= document.createElement('p');
+      temp.innerText= Math.floor((forecast.list[i].main.temp_max - 273))+ ' °C' + ' / ' + Math.floor((forecast.list[i].main.temp_min - 273))+ ' °C';
+
+      div.appendChild(time)
+      div.appendChild(temp)
+
+      let desc= document.createElement('p');
+      desc.setAttribute('class','desc')
+      desc.innerText= forecast.list[i].weather[0].description;
+
+      hourR.appendChild(div);
+      hourR.appendChild(desc)
+      document.querySelector('.templist').appendChild(hourR);
 }
+}
+
