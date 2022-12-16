@@ -112,5 +112,5 @@ function dayForecast(forecast){
 
       document.querySelector('.weekF').appendChild(div)
   }
-} 
+}
 
