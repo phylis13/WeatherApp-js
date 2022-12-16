@@ -89,4 +89,28 @@ function weatherReport(data){
       document.querySelector('.templist').appendChild(hourR);
 }
 }
+function dayForecast(forecast){
+  document.querySelector('.weekF').innerHTML=''
+  for (let i = 8; i < forecast.list.length; i+=8) {
+      console.log(forecast.list[i]);
+      let div= document.createElement('div');
+      div.setAttribute('class','dayF');
+      
+      let day= document.createElement('p');
+      day.setAttribute('class','date')
+      day.innerText= new Date(forecast.list[i].dt*1000).toDateString(undefined,'Asia/Kolkata');
+      div.appendChild(day);
+
+      let temp= document.createElement('p');
+      temp.innerText= Math.floor((forecast.list[i].main.temp_max - 273))+ ' °C' + ' / ' + Math.floor((forecast.list[i].main.temp_min - 273))+ ' °C';
+      div.appendChild(temp)
+
+      let description= document.createElement('p');
+      description.setAttribute('class','desc')
+      description.innerText= forecast.list[i].weather[0].description;
+      div.appendChild(description);
+
+      document.querySelector('.weekF').appendChild(div)
+  }
+} 
 
