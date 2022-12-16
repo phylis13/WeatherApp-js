@@ -45,3 +45,43 @@ body{
   cursor: pointer;
   border: none;
 }
+.weather{
+  text-align: center;
+  color: aliceblue;
+}
+#city{
+  font-size: 30px;
+}
+.weather img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(240, 248, 255, 0.408);
+}
+#temperature{
+  font-size: 50px;
+  margin: 0;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.temp-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+#clouds{
+  font-size: 20px;
+  background: rgba(153, 205, 50, 0.778);
+  padding: 2px 20px;
+  border-radius: 15px;
+}
+main{
+  display: grid;
+  grid-column-gap: 25px;
+  grid-template-columns: 1fr 5px 1fr;
+  align-items: center;
+  margin: 0 50px;
+  color: white;
+}
+
