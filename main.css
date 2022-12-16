@@ -16,4 +16,32 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1{
+  color: rgb(214, 147, 45);
+  text-decoration: underline;
+  font-family: 'Orbitron', sans-serif;
+}
+#input{
+  font-size: 18px;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background: aliceblue;
+}
+#search{
+  background: none;
+  padding: 5px 20px;
+  color: aliceblue;
+  outline: none;
+  background: cadetblue;
+  font-size: 17px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
 }
