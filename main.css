@@ -1,52 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body  {
-    font-family: 'montserrat', sans-serif;
-    background-color: darksalmon;
-    background-size: cover;
-    background-position: topcenter;
-}
-
-.app-wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: none;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 15px 15px;
-}
-header inputs {
-    width: 100%;
-    max-width: 280px;
-    padding: 10px 15px;
-    border: none;
-    outline: none;
+/* style.css */
+body {
+    font-family: sans-serif;
     background-color: plum;
-    border-radius: 16px 0px 16px 0px;
-    border-bottom: 3px solid #DF8E00;
-
-    color: #313131;
-    font-size: 20px;
-    font-weight: 300px;
-    transition: 0.2s ease-out;
-
-}
-
-header input:focus {
-    background-color: plum;
-}
-
-main {
-    flex: 1 1 100%;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;flex: 1 1 100%;
     padding: 25px 25px 50px;
     display: flex;
     align-items: center;
@@ -62,12 +30,12 @@ main {
     margin-bottom: 5px;
 }
 .location .date {
-    color: #fff;
+    color:#fff;
     font-size: 16px;
 }
 
 .current .temp {
-    color: #FFF;
+    color: #fff;
     font-size: 102px;
     font-weight: 900;
     margin: 30px 0px;
@@ -79,7 +47,7 @@ main {
 }
 
 .current .weather {
-    color: #FFF;
+    color: #fff;
     font-size: 32px;
     font-weight: 700;
     font-style: italic;
@@ -89,10 +57,29 @@ main {
 }
 
 .current .hi-low {
-    color:#fff;
+    color: #fff;
     font-size: 24px;
     font-weight: 500px;
-    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.3);
 }
-    
-
+  
+  #form {
+    display: flex;
+    align-items: center;
+  }
+  
+  #form label {
+    margin-right: 10px;
+  }
+  
+  #weather {
+    margin-top: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
