@@ -1,10 +1,11 @@
-const apikey="608cd618565f59767b1a70d5cab63162";
+const apikey="6b6b43d5a034d293b4672c5d31523f25";
 window.addEventListener("load",()=>{
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position)=>{
             let lon= position.coords.longitude;
             let lat= position.coords.latitude;
-            const url= `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=${apikey}`;
+            const url= `https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=6b6b43d5a034d293b4672c5d31523f25
+            `;
             
 
             fetch(url).then((res)=>{
@@ -24,7 +25,7 @@ window.addEventListener("load",()=>{
 
 function searchByCity(){
     var place= document.getElementById('input').value;
-    var urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
+    var urlsearch= `https://api.openweathermap.org/data/2.5/forecast?id=${place}&` + `524901&appid=${apikey}`;
 
     fetch(urlsearch).then((res)=>{
         return res.json();
@@ -37,7 +38,7 @@ function searchByCity(){
 
 function weatherReport(data){
 
-    var urlcast= `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=${apikey}`;
+    var urlcast= `https://api.openweathermap.org/data/2.5/forecast?id=${data.name}&` + `524901&appid=${apikey}`;
 
     fetch(urlcast).then((res)=>{
         return res.json();
