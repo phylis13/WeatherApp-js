@@ -13,7 +13,7 @@ window.addEventListener("load",()=>{
                 console.log(data);
                 console.log(new Date().getTime())
                 var dat= new Date(data.dt)
-                console.log(dat.toLocaleString(undefined,'Africa/Kenya'))
+                console.log(dat.toLocaleString(undefined,'Asia/Kolkata'))
                 console.log(new Date().getMinutes())
                 weatherReport(data);
             })
@@ -68,7 +68,7 @@ function hourForecast(forecast){
     for (let i = 0; i < 5; i++) {
 
         var date= new Date(forecast.list[i].dt*1000)
-        console.log((date.toLocaleTimeString(undefined,'Africa/Kenya')).replace(':00',''))
+        console.log((date.toLocaleTimeString(undefined,'Asia/Kolkata')).replace(':00',''))
 
         let hourR=document.createElement('div');
         hourR.setAttribute('class','next');
@@ -76,7 +76,7 @@ function hourForecast(forecast){
         let div= document.createElement('div');
         let time= document.createElement('p');
         time.setAttribute('class','time')
-        time.innerText= (date.toLocaleTimeString(undefined,'Africa/Kenya')).replace(':00','');
+        time.innerText= (date.toLocaleTimeString(undefined,'Asia/Kolkata')).replace(':00','');
 
         let temp= document.createElement('p');
         temp.innerText= Math.floor((forecast.list[i].main.temp_max - 273))+ ' °C' + ' / ' + Math.floor((forecast.list[i].main.temp_min - 273))+ ' °C';
@@ -103,7 +103,7 @@ function dayForecast(forecast){
         
         let day= document.createElement('p');
         day.setAttribute('class','date')
-        day.innerText= new Date(forecast.list[i].dt*1000).toDateString(undefined,'Africa/Kenya');
+        day.innerText= new Date(forecast.list[i].dt*1000).toDateString(undefined,'Asia/Kolkata');
         div.appendChild(day);
 
         let temp= document.createElement('p');
