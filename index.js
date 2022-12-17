@@ -1,11 +1,10 @@
-const apikey="6b6b43d5a034d293b4672c5d31523f25";
+const apikey="608cd618565f59767b1a70d5cab63162";
 window.addEventListener("load",()=>{
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position)=>{
             let lon= position.coords.longitude;
             let lat= position.coords.latitude;
-            const url= `https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=6b6b43d5a034d293b4672c5d31523f25
-            `;
+            const url= `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=${apikey}`;
             
 
             fetch(url).then((res)=>{
@@ -14,7 +13,7 @@ window.addEventListener("load",()=>{
                 console.log(data);
                 console.log(new Date().getTime())
                 var dat= new Date(data.dt)
-                console.log(dat.toLocaleString(undefined,'Asia/Kolkata'))
+                console.log(dat.toLocaleString(undefined,'Africa/Kenya'))
                 console.log(new Date().getMinutes())
                 weatherReport(data);
             })
@@ -25,7 +24,7 @@ window.addEventListener("load",()=>{
 
 function searchByCity(){
     var place= document.getElementById('input').value;
-    var urlsearch= `https://api.openweathermap.org/data/2.5/forecast?id=${place}&` + `524901&appid=${apikey}`;
+    var urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
 
     fetch(urlsearch).then((res)=>{
         return res.json();
@@ -38,7 +37,7 @@ function searchByCity(){
 
 function weatherReport(data){
 
-    var urlcast= `https://api.openweathermap.org/data/2.5/forecast?id=${data.name}&` + `524901&appid=${apikey}`;
+    var urlcast= `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=${apikey}`;
 
     fetch(urlcast).then((res)=>{
         return res.json();
@@ -69,7 +68,7 @@ function hourForecast(forecast){
     for (let i = 0; i < 5; i++) {
 
         var date= new Date(forecast.list[i].dt*1000)
-        console.log((date.toLocaleTimeString(undefined,'Asia/Kolkata')).replace(':00',''))
+        console.log((date.toLocaleTimeString(undefined,'Africa/Kenya')).replace(':00',''))
 
         let hourR=document.createElement('div');
         hourR.setAttribute('class','next');
@@ -77,7 +76,7 @@ function hourForecast(forecast){
         let div= document.createElement('div');
         let time= document.createElement('p');
         time.setAttribute('class','time')
-        time.innerText= (date.toLocaleTimeString(undefined,'Asia/Kolkata')).replace(':00','');
+        time.innerText= (date.toLocaleTimeString(undefined,'Africa/Kenya')).replace(':00','');
 
         let temp= document.createElement('p');
         temp.innerText= Math.floor((forecast.list[i].main.temp_max - 273))+ ' °C' + ' / ' + Math.floor((forecast.list[i].main.temp_min - 273))+ ' °C';
@@ -104,7 +103,7 @@ function dayForecast(forecast){
         
         let day= document.createElement('p');
         day.setAttribute('class','date')
-        day.innerText= new Date(forecast.list[i].dt*1000).toDateString(undefined,'Asia/Kolkata');
+        day.innerText= new Date(forecast.list[i].dt*1000).toDateString(undefined,'Africa/Kenya');
         div.appendChild(day);
 
         let temp= document.createElement('p');
