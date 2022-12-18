@@ -1,10 +1,10 @@
-const apikey="608cd618565f59767b1a70d5cab63162";
+const apikey="096d6dd05385318e65fcfb74cd4467ea";
 window.addEventListener("load",()=>{
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position)=>{
             let lon= position.coords.longitude;
             let lat= position.coords.latitude;
-            const url= `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=${apikey}`;
+            const url= `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apikey}`;
             
 
             fetch(url).then((res)=>{
