@@ -22,7 +22,7 @@ window.addEventListener("load",()=>{
 })
 
 
-function searchByCity(name){
+function searchByCity(){
     var place= document.getElementById('input').value;
     const urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
 
