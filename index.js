@@ -1,4 +1,4 @@
-const apikey="096d6dd05385318e65fcfb74cd4467ea";
+const apikey="608cd618565f59767b1a70d5cab63162";
 window.addEventListener("load",()=>{
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position)=>{
@@ -24,7 +24,7 @@ window.addEventListener("load",()=>{
 
 function searchByCity(){
     var place= document.getElementById('input').value;
-    const urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
+    var urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=${apikey}`;
 
     fetch(urlsearch).then((res)=>{
         return res.json();
@@ -37,7 +37,7 @@ function searchByCity(){
 
 function weatherReport(data){
 
-    const urlcast= `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=${apikey}`;
+    var urlcast= `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=${apikey}`;
 
     fetch(urlcast).then((res)=>{
         return res.json();
@@ -117,4 +117,4 @@ function dayForecast(forecast){
 
         document.querySelector('.weekF').appendChild(div)
     }
-} 
+}  

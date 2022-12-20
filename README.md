@@ -21,11 +21,34 @@ This app is designed to provide users with real-time weather updates and forecas
 - git clone the repo on your terminal 
 ## Install the dependencies:
 json server
+## Development Requirements
 
- 
+- Visual Studio Code.
+- Live server extension.
+- json-server packages installed 
+- npm 
+- Browser(Chrome or any other Chromium based Browser)
+
+## Running the application
+
+- Once you have written your code, right click on the index.html file and run using Live Server to open the application in your web browser.
+
+## Help
+
+if the program is not runnnind or not displaying on the browser make sure that you connected your html script.js and css together
+
+```
+
 ## Acknowledgments
 
 The Weather App uses the OpenWeatherMap API to retrieve weather data. We would like to thank the OpenWeatherMap team for their support and for providing access to their API.
+
+##                      gjjgy Author
+Project contributed to by:
+ [phylis njeri](https://github.com/phylis13/)
+
+## Licence
+This project is licensed under the [ISC] 
 
 
 
