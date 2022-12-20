@@ -43,7 +43,7 @@ if the program is not runnnind or not displaying on the browser make sure that y
 
 The Weather App uses the OpenWeatherMap API to retrieve weather data. We would like to thank the OpenWeatherMap team for their support and for providing access to their API.
 
-##                      gjjgy Author
+##Author
 Project contributed to by:
  [phylis njeri](https://github.com/phylis13/)
 
